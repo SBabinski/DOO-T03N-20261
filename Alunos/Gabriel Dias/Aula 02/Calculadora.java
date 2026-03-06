@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Principal {
+public class Calculadora {
     static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
         menuPrincipal();
@@ -35,7 +35,7 @@ public class Principal {
                     System.out.print("\nDigite uma opcao valida: ");
             }
         }
-        while (op != 3);
+        while (true);
     }
     public static void calculaTotal() {
         System.out.print("\nDigite a quantidade do produto: ");
