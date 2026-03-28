@@ -56,7 +56,7 @@ public class VendaIO {
     
     // Pede quantidade
     public int pedeQundidade() {
-        System.out.println("\nQuntidade: ");
+        System.out.println("\nQuantidade: ");
         return scanner.nextInt();
     }
     
