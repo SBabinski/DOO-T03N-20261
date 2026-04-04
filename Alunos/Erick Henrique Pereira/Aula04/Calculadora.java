@@ -1,8 +1,11 @@
+import java.time.LocalDate;
+
 public class Calculadora {
     private int quantidade;
     private double preco;
     private double descontoAplicado;
-    
+    private LocalDate saleDate;
+
     public Calculadora() {
     }
 
@@ -35,5 +38,12 @@ public class Calculadora {
     public void setDescontoAplicado(double descontoAplicado) {
         this.descontoAplicado = descontoAplicado;
     }
-    
+
+    public LocalDate getSaleDate() {
+        return saleDate;
+    }
+
+    public void setSaleDate(LocalDate saleDate) {
+        this.saleDate = saleDate;
+    }
 }

@@ -89,6 +89,8 @@ public class Loja {
             System.out.printf("Quantidade: %d, Preço: %.2f,"+
              " Total com desconto: %.2f%n",
             calc.getQuantidade(), calc.getPreco(), calc.getDescontoAplicado());
+
+            
         }
        
         return;

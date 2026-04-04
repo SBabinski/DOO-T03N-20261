@@ -1,21 +1,15 @@
-import java.time.LocalDate;
-
 public class Venda {
 
     private String nomePlanta;
     private int quantidade;
     private double valorTotal;
     private double descontoAplicado;
-    private LocalDate dataVenda;
 
-    public Venda(String nomePlanta, int quantidade, double valorTotal,
-                 double descontoAplicado, LocalDate dataVenda) {
-
+    public Venda(String nomePlanta, int quantidade, double valorTotal, double descontoAplicado) {
         this.nomePlanta = nomePlanta;
         this.quantidade = quantidade;
         this.valorTotal = valorTotal;
         this.descontoAplicado = descontoAplicado;
-        this.dataVenda = dataVenda;
     }
 
     public String getNomePlanta() {
@@ -32,9 +26,5 @@ public class Venda {
 
     public double getDescontoAplicado() {
         return descontoAplicado;
-    }
-
-    public LocalDate getDataVenda() {
-        return dataVenda;
     }
 }

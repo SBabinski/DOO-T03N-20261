@@ -2,10 +2,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import java.time.LocalDate;
-import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -21,9 +17,7 @@ public class Main {
             System.out.println("[1] - Realizar Venda");
             System.out.println("[2] - Listar Vendas");
             System.out.println("[3] - Calcular Troco");
-            System.out.println("[4] - Buscar total de vendas por dia");
-            System.out.println("[5] - Buscar total de vendas por mês");
-            System.out.println("[6] - Sair");
+            System.out.println("[4] - Sair");
             System.out.print("Escolha uma opção: ");
 
             opcao = scanner.nextInt();
@@ -41,27 +35,23 @@ public class Main {
 
                     System.out.print("Digite a quantidade: ");
                     int quantidade = scanner.nextInt();
-                    scanner.nextLine();
 
                     Planta planta = new Planta(nome, preco);
 
                     double valorTotal = calculadora.calcularPrecoTotal(
                             quantidade,
-                            planta.getPrecoUnitario());
+                            planta.getPrecoUnitario()
+                    );
 
                     double desconto = calculadora.calcularDesconto(quantidade, valorTotal);
                     double valorFinal = calculadora.calcularValorFinal(valorTotal, desconto);
-
-                    // Data com fuso horário fixo
-                    LocalDate dataVenda = LocalDate.now(
-                            ZoneId.of("America/Sao_Paulo"));
 
                     Venda venda = new Venda(
                             planta.getNome(),
                             quantidade,
                             valorFinal,
-                            desconto,
-                            dataVenda);
+                            desconto
+                    );
 
                     listaVendas.add(venda);
 
@@ -71,7 +61,6 @@ public class Main {
                     System.out.println("Valor total: R$ " + valorTotal);
                     System.out.println("Desconto: R$ " + desconto);
                     System.out.println("Valor final: R$ " + valorFinal);
-                    System.out.println("Data: " + dataVenda);
 
                     break;
 
@@ -88,7 +77,6 @@ public class Main {
                             System.out.println("Quantidade: " + v.getQuantidade());
                             System.out.println("Desconto: R$ " + v.getDescontoAplicado());
                             System.out.println("Valor Final: R$ " + v.getValorTotal());
-                            System.out.println("Data: " + v.getDataVenda());
                         }
                     }
                     break;
@@ -100,7 +88,6 @@ public class Main {
 
                     System.out.print("Digite o valor final da compra: ");
                     double valorCompra = scanner.nextDouble();
-                    scanner.nextLine();
 
                     double troco = calculadora.calcularTroco(valorPago, valorCompra);
 
@@ -112,62 +99,6 @@ public class Main {
                     break;
 
                 case 4:
-
-                    if (listaVendas.isEmpty()) {
-                        System.out.println("Nenhuma venda registrada ainda.");
-                        break;
-                    }
-
-                    try {
-                        System.out.print("Digite a data (dd/MM/yyyy): ");
-                        String dataTexto = scanner.nextLine();
-
-                        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-                        LocalDate dataBusca = LocalDate.parse(dataTexto, formatter);
-
-                        int totalDia = 0;
-
-                        for (Venda v : listaVendas) {
-                            if (v.getDataVenda().equals(dataBusca)) {
-                                totalDia += v.getQuantidade();
-                            }
-                        }
-
-                        if (totalDia == 0) {
-                            System.out.println("Nenhuma venda encontrada nessa data.");
-                        } else {
-                            System.out.println("Total de plantas vendidas nesse dia: " + totalDia);
-                        }
-
-                    } catch (Exception e) {
-                        System.out.println("Data inválida! Use o formato dd/MM/yyyy.");
-                    }
-
-                    break;
-
-                case 5:
-
-                    System.out.print("Digite o mês (1-12): ");
-                    int mes = scanner.nextInt();
-
-                    System.out.print("Digite o ano: ");
-                    int ano = scanner.nextInt();
-                    scanner.nextLine();
-
-                    int totalMes = 0;
-
-                    for (Venda v : listaVendas) {
-                        if (v.getDataVenda().getMonthValue() == mes &&
-                                v.getDataVenda().getYear() == ano) {
-
-                            totalMes += v.getQuantidade();
-                        }
-                    }
-
-                    System.out.println("Total de plantas vendidas no mês: " + totalMes);
-                    break;
-
-                case 6:
                     System.out.println("Encerrando o sistema...");
                     break;
 
@@ -175,7 +106,7 @@ public class Main {
                     System.out.println("Opção inválida!");
             }
 
-        } while (opcao != 64);
+        } while (opcao != 4);
 
         scanner.close();
     }
