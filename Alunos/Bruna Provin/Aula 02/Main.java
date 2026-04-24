@@ -59,7 +59,7 @@ public class Main {
                     break;
 
                 case 3:
-                    System.out.println("Encerrando o sistema 🌿");
+                    System.out.println("Encerrando o sistema ");
                     break;
 
                 default:
