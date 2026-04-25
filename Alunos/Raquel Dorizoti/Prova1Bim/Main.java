@@ -484,8 +484,8 @@ public class Main {
     static void demonstracao() {
         System.out.println("\n===== DEMONSTRAÇÃO =====");
 
-        Inquilino inquilino1 = new Inquilino("Raquel", "111.111.111-11", "(41) 99999-1111");
-        Inquilino inquilino2 = new Inquilino("Samuel", "222.222.222-22", "(41) 99999-2222");
+        Inquilino inquilino1 = new Inquilino("Raquel", "109.876.543-21", "(45) 7070-7070");
+        Inquilino inquilino2 = new Inquilino("Samuel", "123.456.789-10", "(45) 0800-7070");
 
         Apartamento apartamento = new Apartamento("Rua das Flores, 100", 1500.00, 5);
         Casa casa = new Casa("Rua das Palmeiras, 200", 2200.00, true);
