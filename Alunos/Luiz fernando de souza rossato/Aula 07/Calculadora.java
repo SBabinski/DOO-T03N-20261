@@ -18,9 +18,7 @@ public class Calculadora {
      loja = new Loja("My Plant", 
      "My Plant ltda" , 
      "99.240.653/0001-05",
-    "cascavel",
-    "jose dos pinhais", 
-    "Rua estados unidos");
+    new Endereco("PR", "Cascavel", "Jose dos Pinhais", "123", "Rua Estados Unidos"));
     
             MostrarMenu(scanner);
     }
@@ -59,7 +57,10 @@ public class Calculadora {
                     break; 
                 case 6:
                     mostrardadosLoja(scanner);
-                    break;                           
+                    break;    
+                case 7: 
+                    processarPedido(scanner);
+                    break;                       
                 default:
                     System.out.println("opção invalida");
                     break;
@@ -148,5 +149,18 @@ public class Calculadora {
         loja.contarClientes();
         loja.contarVendedores();
         loja.mostrarDetalhes();
+    }
+
+    private static void processarPedido(Scanner scanner) {
+         ProcessaPedido processador = new ProcessaPedido();
+
+        Pedido pedido = processador.processar(
+                1,
+                loja.clientes.get(0),
+                loja.vendedores.get(0),
+                loja
+        );
+
+        pedido.gerarDescricaoVenda();
     }
 }
