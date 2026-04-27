@@ -1,24 +1,33 @@
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Scanner;
 
-// ==================== ENDEREÇO ====================
 class Endereco {
-    String estado, cidade, bairro, rua;
+    String estado;
+    String cidade;
+    String bairro;
+    int numero;
+    String complemento;
 
-    public Endereco(String estado, String cidade, String bairro, String rua) {
+    public Endereco(String estado, String cidade, String bairro, int numero, String complemento) {
         this.estado = estado;
         this.cidade = cidade;
         this.bairro = bairro;
-        this.rua = rua;
+        this.numero = numero;
+        this.complemento = complemento;
     }
 
-    public String apresentarLogradouro() {
-        return rua + ", " + bairro + " - " + cidade + "/" + estado;
+    public void apresentarLogradouro() {
+        System.out.println(
+                "Endereço: " + bairro + ", Nº " + numero + " - " +
+                cidade + "/" + estado + " | " + complemento
+        );
     }
 }
 
-// ==================== HERANÇA ====================
 class Pessoa {
     String nome;
     int idade;
@@ -32,39 +41,58 @@ class Pessoa {
 
     public void apresentarse() {
         System.out.println("Nome: " + nome + " | Idade: " + idade);
+        endereco.apresentarLogradouro();
     }
 }
 
-// ==================== CLIENTE ====================
 class Cliente extends Pessoa {
+
     public Cliente(String nome, int idade, Endereco endereco) {
         super(nome, idade, endereco);
     }
+
+    @Override
+    public void apresentarse() {
+        System.out.println("CLIENTE");
+        super.apresentarse();
+    }
 }
 
-// ==================== VENDEDOR ====================
 class Vendedor extends Pessoa {
-    String empresa;
+    String loja;
     double salarioBase;
     double[] salarioRecebido;
 
-    public Vendedor(String nome, int idade, String empresa, Endereco endereco, double salarioBase) {
+    public Vendedor(String nome, int idade, String loja, Endereco endereco, double salarioBase) {
         super(nome, idade, endereco);
-        this.empresa = empresa;
+        this.loja = loja;
         this.salarioBase = salarioBase;
-        this.salarioRecebido = new double[]{salarioBase, salarioBase * 1.1, salarioBase * 1.05};
+        this.salarioRecebido = new double[]{
+                salarioBase,
+                salarioBase * 1.10,
+                salarioBase * 1.05
+        };
     }
 
     public double calcularMedia() {
-        return Arrays.stream(salarioRecebido).average().orElse(0);
+        double soma = 0;
+        for (double s : salarioRecebido) {
+            soma += s;
+        }
+        return soma / salarioRecebido.length;
     }
 
     public double calcularBonus() {
         return salarioBase * 0.20;
     }
+
+    @Override
+    public void apresentarse() {
+        System.out.println("VENDEDOR");
+        System.out.println("Nome: " + nome + " | Idade: " + idade + " | Loja: " + loja);
+    }
 }
 
-// ==================== GERENTE ====================
 class Gerente extends Pessoa {
     String loja;
     double salarioBase;
@@ -74,26 +102,36 @@ class Gerente extends Pessoa {
         super(nome, idade, endereco);
         this.loja = loja;
         this.salarioBase = salarioBase;
-        this.salarioRecebido = new double[]{salarioBase, salarioBase * 1.2, salarioBase * 1.1};
-    }
-
-    public void apresentarse() {
-        System.out.println(nome + " | " + idade + " | Loja: " + loja);
+        this.salarioRecebido = new double[]{
+                salarioBase,
+                salarioBase * 1.20,
+                salarioBase * 1.15
+        };
     }
 
     public double calcularMedia() {
-        return Arrays.stream(salarioRecebido).average().orElse(0);
+        double soma = 0;
+        for (double s : salarioRecebido) {
+            soma += s;
+        }
+        return soma / salarioRecebido.length;
     }
 
     public double calcularBonus() {
         return salarioBase * 0.35;
     }
+
+    @Override
+    public void apresentarse() {
+        System.out.println("GERENTE");
+        System.out.println("Nome: " + nome + " | Idade: " + idade + " | Loja: " + loja);
+    }
 }
 
-// ==================== ITEM ====================
 class Item {
     int id;
-    String nome, tipo;
+    String nome;
+    String tipo;
     double valor;
 
     public Item(int id, String nome, String tipo, double valor) {
@@ -104,155 +142,240 @@ class Item {
     }
 
     public void gerarDescricao() {
-        System.out.println(id + " | " + nome + " | " + tipo + " | R$ " + valor);
+        System.out.println(
+                "ID: " + id +
+                " | Nome: " + nome +
+                " | Tipo: " + tipo +
+                " | Valor: R$ " + valor
+        );
     }
 }
 
-// ==================== PEDIDO ====================
+class Loja {
+    String nomeFantasia;
+    String cnpj;
+    Endereco endereco;
+
+    List<Vendedor> vendedores = new ArrayList<>();
+    List<Cliente> clientes = new ArrayList<>();
+    List<Gerente> gerentes = new ArrayList<>();
+
+    public Loja(String nomeFantasia, String cnpj, Endereco endereco) {
+        this.nomeFantasia = nomeFantasia;
+        this.cnpj = cnpj;
+        this.endereco = endereco;
+    }
+
+    public void apresentarse() {
+        System.out.println("Loja: " + nomeFantasia);
+        System.out.println("CNPJ: " + cnpj);
+        endereco.apresentarLogradouro();
+        System.out.println("Clientes: " + clientes.size());
+        System.out.println("Vendedores: " + vendedores.size());
+        System.out.println("Gerentes: " + gerentes.size());
+    }
+}
+
 class Pedido {
     int id;
-    LocalDate dataCriacao, dataPagamento, dataVencimentoReserva;
+    Date dataCriacao;
+    Date dataPagamento;
+    Date dataVencimentoReserva;
+
     Cliente cliente;
     Vendedor vendedor;
-    String loja;
-    List<Item> itens;
+    Loja loja;
 
-    public Pedido(int id, Cliente cliente, Vendedor vendedor, String loja, List<Item> itens) {
+    List<Item> itens = new ArrayList<>();
+
+    public Pedido(
+            int id,
+            Cliente cliente,
+            Vendedor vendedor,
+            Loja loja,
+            Date dataCriacao,
+            Date dataVencimentoReserva
+    ) {
         this.id = id;
         this.cliente = cliente;
         this.vendedor = vendedor;
         this.loja = loja;
-        this.itens = itens;
-        this.dataCriacao = LocalDate.now();
-        this.dataVencimentoReserva = dataCriacao.plusDays(2);
+        this.dataCriacao = dataCriacao;
+        this.dataVencimentoReserva = dataVencimentoReserva;
     }
 
     public double calcularValorTotal() {
-        return itens.stream().mapToDouble(i -> i.valor).sum();
+        double total = 0;
+        for (Item item : itens) {
+            total += item.valor;
+        }
+        return total;
     }
 
     public void gerarDescricaoVenda() {
-        System.out.println("Pedido criado em: " + dataCriacao);
-        System.out.println("Valor total: R$ " + calcularValorTotal());
+        System.out.println(
+                "Pedido criado em: " + dataCriacao +
+                " | Valor total: R$ " + calcularValorTotal()
+        );
     }
 }
 
-// ==================== PROCESSADOR ====================
 class ProcessaPedido {
 
-    public Pedido processar(int id, Cliente cliente, Vendedor vendedor, String loja, List<Item> itens) {
-        Pedido pedido = new Pedido(id, cliente, vendedor, loja, itens);
+    public Pedido processar(
+            int id,
+            Cliente cliente,
+            Vendedor vendedor,
+            Loja loja,
+            List<Item> itens
+    ) {
+        Date hoje = new Date();
+        Date vencimento = new Date(System.currentTimeMillis() + (2 * 24 * 60 * 60 * 1000));
+
+        Pedido pedido = new Pedido(id, cliente, vendedor, loja, hoje, vencimento);
+        pedido.itens.addAll(itens);
 
         if (confirmarPagamento(pedido)) {
-            pedido.dataPagamento = LocalDate.now();
+            pedido.dataPagamento = new Date();
             System.out.println("Pagamento confirmado!");
         } else {
-            System.out.println("Reserva vencida!");
+            System.out.println("Reserva vencida.");
         }
 
         return pedido;
     }
 
     private boolean confirmarPagamento(Pedido pedido) {
-        return LocalDate.now().isBefore(pedido.dataVencimentoReserva);
+        Date atual = new Date();
+        return !atual.after(pedido.dataVencimentoReserva);
     }
 }
 
-// ==================== LOJA ====================
-class Loja {
-    String nomeFantasia;
-    List<Vendedor> vendedores = new ArrayList<>();
-    List<Cliente> clientes = new ArrayList<>();
-    List<Gerente> gerentes = new ArrayList<>();
-
-    public Loja(String nomeFantasia) {
-        this.nomeFantasia = nomeFantasia;
-    }
-}
-
-// ==================== MAIN ====================
 public class Calculadora {
 
-    static final DateTimeFormatter FMT = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-    static final List<LocalDate> datasVendas = new ArrayList<>();
-    static final List<String> historico = new ArrayList<>();
-    static final Scanner sc = new Scanner(System.in);
+    static Scanner sc = new Scanner(System.in);
 
-    static final Loja loja = new Loja("My Plant");
+    static Endereco enderecoLoja = new Endereco(
+            "PR",
+            "Ubiratã",
+            "Centro",
+            1750,
+            "Av. Nilza de Oliveira"
+    );
+
+    static Loja loja = new Loja(
+            "Gabi Floricultura",
+            "12.345.678/0001-99",
+            enderecoLoja
+    );
 
     static void inicializarDados() {
-        Endereco e1 = new Endereco("PR", "Ubiratã", "Centro", "Rua A");
-        Endereco e2 = new Endereco("PR", "Ubiratã", "Centro", "Rua B");
+        Cliente c1 = new Cliente(
+                "Maria Oliveira",
+                45,
+                new Endereco("PR", "Ubiratã", "Centro", 10, "Casa")
+        );
 
-        loja.vendedores.add(new Vendedor("Ana", 28, loja.nomeFantasia, e1, 2000));
-        loja.clientes.add(new Cliente("Maria", 30, e2));
-        loja.gerentes.add(new Gerente("Carlos", 40, loja.nomeFantasia, e1, 5000));
+        Vendedor v1 = new Vendedor(
+                "Carlos Lima",
+                35,
+                loja.nomeFantasia,
+                new Endereco("PR", "Ubiratã", "Mutirão", 59, "Casa"),
+                2200
+        );
+
+        Gerente g1 = new Gerente(
+                "Fernanda Souza",
+                40,
+                loja.nomeFantasia,
+                new Endereco("PR", "Ubiratã", "Centro", 101, "Apto"),
+                5000
+        );
+
+        loja.clientes.add(c1);
+        loja.vendedores.add(v1);
+        loja.gerentes.add(g1);
     }
 
-    static double calcularPrecoTotal(int qtd, double preco) {
-        double total = qtd * preco;
-        if (qtd > 10) total *= 0.95;
+    static void criarPedidoFake() {
+        if (loja.clientes.isEmpty() || loja.vendedores.isEmpty()) {
+            System.out.println("Necessário cliente e vendedor cadastrados.");
+            return;
+        }
 
-        datasVendas.add(LocalDate.now());
-        historico.add("Venda: R$ " + total);
-        return total;
-    }
-
-    static double calcularTroco(double pago, double compra) {
-        return pago - compra;
-    }
-
-    static void buscarPorDia(String dataStr) {
-        LocalDate data = LocalDate.parse(dataStr, FMT);
-        long count = datasVendas.stream().filter(d -> d.equals(data)).count();
-        System.out.println("Total no dia: " + count);
-    }
-
-    static void buscarPorMes(int mes) {
-        long count = datasVendas.stream().filter(d -> d.getMonthValue() == mes).count();
-        System.out.println("Total no mês: " + count);
-    }
-
-    static void menuPedidos() {
         List<Item> itens = new ArrayList<>();
-        itens.add(new Item(1, "Rosa", "Flor", 10));
-        itens.add(new Item(2, "Vaso", "Acessório", 20));
+        itens.add(new Item(1, "Samambaia", "Planta", 50));
+        itens.add(new Item(2, "Vaso Decorativo", "Acessório", 80));
 
-        Pedido p = new ProcessaPedido().processar(
+        ProcessaPedido processa = new ProcessaPedido();
+
+        Pedido pedido = processa.processar(
                 1,
                 loja.clientes.get(0),
                 loja.vendedores.get(0),
-                loja.nomeFantasia,
+                loja,
                 itens
         );
 
-        p.gerarDescricaoVenda();
+        pedido.gerarDescricaoVenda();
     }
 
     public static void main(String[] args) {
         inicializarDados();
 
         int op;
+
         do {
-            System.out.println("\n[1] Calcular Preço");
-            System.out.println("[2] Troco");
-            System.out.println("[3] Histórico");
-            System.out.println("[4] Buscar por Dia");
-            System.out.println("[5] Buscar por Mês");
-            System.out.println("[6] Criar Pedido");
-            System.out.println("[7] Sair");
+            System.out.println("\n===== SISTEMA FLORICULTURA =====");
+            System.out.println("[1] Informações da Loja");
+            System.out.println("[2] Listar Clientes");
+            System.out.println("[3] Listar Vendedores");
+            System.out.println("[4] Listar Gerentes");
+            System.out.println("[5] Criar Pedido (fake)");
+            System.out.println("[6] Sair");
+            System.out.print("Escolha: ");
 
             op = sc.nextInt();
 
             switch (op) {
-                case 1 -> System.out.println("Total: " + calcularPrecoTotal(5, 10));
-                case 2 -> System.out.println("Troco: " + calcularTroco(100, 50));
-                case 3 -> historico.forEach(System.out::println);
-                case 4 -> buscarPorDia("01/01/2024");
-                case 5 -> buscarPorMes(1);
-                case 6 -> menuPedidos();
+                case 1:
+                    loja.apresentarse();
+                    break;
+
+                case 2:
+                    for (Cliente c : loja.clientes) {
+                        c.apresentarse();
+                    }
+                    break;
+
+                case 3:
+                    for (Vendedor v : loja.vendedores) {
+                        v.apresentarse();
+                        System.out.println("Média: " + v.calcularMedia());
+                        System.out.println("Bônus: " + v.calcularBonus());
+                    }
+                    break;
+
+                case 4:
+                    for (Gerente g : loja.gerentes) {
+                        g.apresentarse();
+                        System.out.println("Média: " + g.calcularMedia());
+                        System.out.println("Bônus: " + g.calcularBonus());
+                    }
+                    break;
+
+                case 5:
+                    criarPedidoFake();
+                    break;
+
+                case 6:
+                    System.out.println("Encerrando...");
+                    break;
+
+                default:
+                    System.out.println("Opção inválida.");
             }
 
-        } while (op != 7);
+        } while (op != 6);
     }
 }
