@@ -14,6 +14,6 @@ public class Pedido {
     }
 
     public void gerarDescricaoVenda() {
-        System.out.println("🛒 Pedido: " + id + " | Criado em: " + dataCriacao + " | Total: R$ " + calcularValorTotal());
+        System.out.println("Pedido: " + id + " | Criado em: " + dataCriacao + " | Total: R$ " + calcularValorTotal());
     }
 }
