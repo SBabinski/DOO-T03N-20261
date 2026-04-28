@@ -18,7 +18,7 @@ public class Gerente extends Pessoa {
 
     @Override
     public void apresentarse() {
-        System.out.println("👔 Gerente: " + nome + " | Loja: " + loja);
+        System.out.println("Gerente: " + nome + " | Loja: " + loja);
     }
 
     public double calcularMedia() {
