@@ -1,0 +1,36 @@
+Paradigmas de Programação: Imperativo e Declarativo
+
+Os paradigmas de programação representam diferentes formas de pensar e estruturar a solução de problemas computacionais. Dois dos principais paradigmas apresentados em aula são o Imperativo e o Declarativo.
+
+O paradigma Imperativo é baseado na execução sequencial de comandos. Nele, o programador deve descrever explicitamente "como" o problema deve ser resolvido, informando passo a passo as ações que o computador deve realizar. Esse paradigma trabalha com alterações de estado, variáveis mutáveis, laços de repetição e estruturas de controle de fluxo. Linguagens como Java, C e Python (em seu uso procedural) são exemplos típicos desse paradigma.
+
+Já o paradigma Declarativo concentra-se em descrever "o que" se deseja obter, e não "como" chegar ao resultado. O programador declara fatos, regras e relações, deixando para o sistema (interpretador ou motor de inferência) a responsabilidade de encontrar a solução. Esse paradigma é mais comum em linguagens de lógica e consulta, como Prolog e SQL.
+
+Para ilustrar a diferença prática entre os dois paradigmas, utilizamos o problema clássico de calcular o fatorial de um número inteiro.
+
+Exemplo em Java (Paradigma Imperativo):
+
+public static int calcularFatorial(int n) {
+    int resultado = 1;
+    for (int i = 2; i <= n; i++) {
+        resultado = resultado * i;
+    }
+    return resultado;
+}
+
+No código acima, o programador define claramente o algoritmo: inicializa uma variável, utiliza um laço de repetição para multiplicar os valores de forma sequencial e altera o estado da variável resultado passo a passo.
+
+Exemplo em Prolog (Paradigma Declarativo):
+
+fatorial(0, 1).
+fatorial(N, F) :- 
+    N > 0, 
+    N1 is N - 1, 
+    fatorial(N1, F1), 
+    F is N * F1.
+
+No código Prolog, não existem laços nem variáveis mutáveis. São declarados apenas fatos (o fatorial de 0 é 1) e uma regra recursiva. O mecanismo de inferência do Prolog é responsável por resolver a consulta automaticamente através de unificação e recursão.
+
+Ambos os códigos resolvem o mesmo problema de forma correta, porém com filosofias completamente diferentes. O código imperativo oferece maior controle sobre o desempenho e o fluxo de execução, enquanto o código declarativo é mais conciso, próximo da definição matemática do problema e geralmente mais fácil de ler e manter para certos domínios.
+
+Essa comparação demonstra que a escolha do paradigma influencia diretamente a forma como pensamos e escrevemos o código, impactando legibilidade, manutenção e adequação ao tipo de problema a ser resolvido.

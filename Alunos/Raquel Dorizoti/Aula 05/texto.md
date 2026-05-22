@@ -1,0 +1,11 @@
+# Paradigmas de Programação: Imperativo vs Declarativo
+
+Os paradigmas de programação representam diferentes formas de pensar e estruturar soluções computacionais. Entre os principais, destacam-se o paradigma imperativo e o paradigma declarativo, ambos com abordagens distintas na resolução de problemas.
+
+O paradigma imperativo é baseado na descrição explícita de passos que o computador deve seguir para atingir determinado objetivo. Nesse modelo, o programador define instruções sequenciais, controle de fluxo (como laços e condicionais) e manipulação direta de estados de memória. A linguagem Java é um exemplo clássico desse paradigma. Em Java, ao desenvolver um algoritmo, é necessário especificar detalhadamente cada etapa da execução, incluindo variáveis, atribuições e estruturas de repetição.
+
+Por outro lado, o paradigma declarativo foca na descrição do problema e no resultado esperado, sem especificar exatamente como o processo deve ser executado. Nesse modelo, o programador define regras e fatos, deixando que o mecanismo da linguagem determine a melhor forma de chegar à solução. A linguagem Prolog é um exemplo representativo desse paradigma, utilizando lógica formal para realizar inferências e responder consultas.
+
+Ao comparar dois trechos de código — um em Java e outro em Prolog — que possuem o mesmo objetivo, como por exemplo verificar uma condição ou encontrar um valor em uma estrutura, é possível observar diferenças significativas na abordagem. No código em Java, o programador precisa definir explicitamente o fluxo de execução, utilizando estruturas como loops e condicionais para alcançar o resultado desejado. Já no código em Prolog, o programador declara fatos e regras, e a linguagem se encarrega de realizar a busca pela solução por meio de mecanismos de unificação e retrocesso (backtracking).
+
+Dessa forma, enquanto o paradigma imperativo enfatiza o "como fazer", detalhando cada passo da execução, o paradigma declarativo prioriza o "o que deve ser feito", abstraindo o processo de resolução. Ambas as abordagens possuem suas vantagens e são utilizadas de acordo com o contexto do problema a ser resolvido, sendo fundamentais para a formação de um profissional na área de computação.
