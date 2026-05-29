@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Alunos.iml" filepath="$PROJECT_DIR$/Alunos/Alunos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Anderson Simelli/Anderson Simelli.iml" filepath="$PROJECT_DIR$/Alunos/Anderson Simelli/Anderson Simelli.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Arthur m/Arthur m.iml" filepath="$PROJECT_DIR$/Alunos/Arthur m/Arthur m.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/João Paulo Klass Sepulcri/Aula 02/Aula 02.iml" filepath="$PROJECT_DIR$/Alunos/João Paulo Klass Sepulcri/Aula 02/Aula 02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Aulas_Samuel.iml" filepath="$PROJECT_DIR$/.idea/Aulas_Samuel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Bruna Provin/Bruna Provin.iml" filepath="$PROJECT_DIR$/Alunos/Bruna Provin/Bruna Provin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Carlos Eduardo Pastorio Gomes/Carlos Eduardo Pastorio Gomes.iml" filepath="$PROJECT_DIR$/Alunos/Carlos Eduardo Pastorio Gomes/Carlos Eduardo Pastorio Gomes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Celine Afonso Thieme/Celine Afonso Thieme.iml" filepath="$PROJECT_DIR$/Alunos/Celine Afonso Thieme/Celine Afonso Thieme.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Erick Henrique Pereira/Erick Henrique Pereira.iml" filepath="$PROJECT_DIR$/Alunos/Erick Henrique Pereira/Erick Henrique Pereira.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Gabriel Alvise/Gabriel Alvise.iml" filepath="$PROJECT_DIR$/Alunos/Gabriel Alvise/Gabriel Alvise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Gabriel Dias/Gabriel Dias.iml" filepath="$PROJECT_DIR$/Alunos/Gabriel Dias/Gabriel Dias.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Guilherme Alves Portela/Guilherme Alves Portela.iml" filepath="$PROJECT_DIR$/Alunos/Guilherme Alves Portela/Guilherme Alves Portela.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Gustavo Nunes/Gustavo Nunes.iml" filepath="$PROJECT_DIR$/Alunos/Gustavo Nunes/Gustavo Nunes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Isabel Gomes/Isabel Gomes.iml" filepath="$PROJECT_DIR$/Alunos/Isabel Gomes/Isabel Gomes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Joao Arataque/Joao Arataque.iml" filepath="$PROJECT_DIR$/Alunos/Joao Arataque/Joao Arataque.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Joao Pedro Moreno/Joao Pedro Moreno.iml" filepath="$PROJECT_DIR$/Alunos/Joao Pedro Moreno/Joao Pedro Moreno.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Joao Vitor Fernandes/Joao Vitor Fernandes.iml" filepath="$PROJECT_DIR$/Alunos/Joao Vitor Fernandes/Joao Vitor Fernandes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/João Gabriel Kazmierczak/João Gabriel Kazmierczak.iml" filepath="$PROJECT_DIR$/Alunos/João Gabriel Kazmierczak/João Gabriel Kazmierczak.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/João Paulo Klass Sepulcri/João Paulo Klass Sepulcri.iml" filepath="$PROJECT_DIR$/Alunos/João Paulo Klass Sepulcri/João Paulo Klass Sepulcri.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Leonardo R/Leonardo R.iml" filepath="$PROJECT_DIR$/Alunos/Leonardo R/Leonardo R.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Luiz Otavio/Luiz Otavio.iml" filepath="$PROJECT_DIR$/Alunos/Luiz Otavio/Luiz Otavio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Luiz fernando de souza rossato/Luiz fernando de souza rossato.iml" filepath="$PROJECT_DIR$/Alunos/Luiz fernando de souza rossato/Luiz fernando de souza rossato.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Maria Gabriela/Maria Gabriela.iml" filepath="$PROJECT_DIR$/Alunos/Maria Gabriela/Maria Gabriela.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Mateus Zavodini/Mateus Zavodini.iml" filepath="$PROJECT_DIR$/Alunos/Mateus Zavodini/Mateus Zavodini.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Matheus Buratto/Matheus Buratto.iml" filepath="$PROJECT_DIR$/Alunos/Matheus Buratto/Matheus Buratto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Matheus Emanuel/Matheus Emanuel.iml" filepath="$PROJECT_DIR$/Alunos/Matheus Emanuel/Matheus Emanuel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Miguel Eduardo Kozikoski/Miguel Eduardo Kozikoski.iml" filepath="$PROJECT_DIR$/Alunos/Miguel Eduardo Kozikoski/Miguel Eduardo Kozikoski.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Pedro Augusto/Pedro Augusto.iml" filepath="$PROJECT_DIR$/Alunos/Pedro Augusto/Pedro Augusto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Pedro Honorio/Pedro Honorio.iml" filepath="$PROJECT_DIR$/Alunos/Pedro Honorio/Pedro Honorio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Raphael Gomes Henke/Raphael Gomes Henke.iml" filepath="$PROJECT_DIR$/Alunos/Raphael Gomes Henke/Raphael Gomes Henke.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Raquel Dorizoti/Raquel Dorizoti.iml" filepath="$PROJECT_DIR$/Alunos/Raquel Dorizoti/Raquel Dorizoti.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Samuel Stadler/Samuel Stadler.iml" filepath="$PROJECT_DIR$/Alunos/Samuel Stadler/Samuel Stadler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Vinicius Barozi/Vinicius Barozi.iml" filepath="$PROJECT_DIR$/Alunos/Vinicius Barozi/Vinicius Barozi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Vinicius Patrocínio/Vinicius Patrocínio.iml" filepath="$PROJECT_DIR$/Alunos/Vinicius Patrocínio/Vinicius Patrocínio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Vinicius goncalves de oliveira/Vinicius goncalves de oliveira.iml" filepath="$PROJECT_DIR$/Alunos/Vinicius goncalves de oliveira/Vinicius goncalves de oliveira.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Vinícius Fagundes/Vinícius Fagundes.iml" filepath="$PROJECT_DIR$/Alunos/Vinícius Fagundes/Vinícius Fagundes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Vitor Pimentel/Vitor Pimentel.iml" filepath="$PROJECT_DIR$/Alunos/Vitor Pimentel/Vitor Pimentel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/Luiz Otavio/aula 02/aula 02.iml" filepath="$PROJECT_DIR$/Alunos/Luiz Otavio/aula 02/aula 02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alunos/luiz henrique marinello da rosa/luiz henrique marinello da rosa.iml" filepath="$PROJECT_DIR$/Alunos/luiz henrique marinello da rosa/luiz henrique marinello da rosa.iml" />
+    </modules>
+  </component>
+</project>
