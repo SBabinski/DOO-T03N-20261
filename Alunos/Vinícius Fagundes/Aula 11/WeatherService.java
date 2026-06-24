@@ -9,14 +9,44 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class WeatherService {
-    private static final String API_KEY = new String(
-            java.util.Base64.getDecoder().decode("NlRTQkZTVkdFREZNTkE2S1NMV1NCU1ZMUg=="),
-            java.nio.charset.StandardCharsets.UTF_8);
     private static final String BASE_URL = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/";
 
+    private static String getApiKey() throws Exception {
+        java.util.Properties prop = new java.util.Properties();
+        try (java.io.InputStream input = new java.io.FileInputStream("config.properties")) {
+            prop.load(input);
+            String key = prop.getProperty("api.key");
+            if (key != null && !key.trim().isEmpty()) {
+                return key.trim();
+            }
+        } catch (java.io.IOException ex) {
+            // Arquivo não existe ou não pôde ser lido
+        }
+
+        // Solicita ao usuário via janela gráfica caso não encontre
+        String key = javax.swing.JOptionPane.showInputDialog(null,
+                "Chave de API não encontrada em 'config.properties'.\nPor favor, insira sua chave da Visual Crossing:",
+                "Configuração da API Key",
+                javax.swing.JOptionPane.QUESTION_MESSAGE);
+
+        if (key != null && !key.trim().isEmpty()) {
+            key = key.trim();
+            try (java.io.OutputStream output = new java.io.FileOutputStream("config.properties")) {
+                prop.setProperty("api.key", key);
+                prop.store(output, "Configuracoes da API de Clima");
+            } catch (java.io.IOException ioEx) {
+                // Falha silenciosa ao tentar salvar o arquivo
+            }
+            return key;
+        }
+
+        throw new RuntimeException("Chave de API é obrigatória para buscar dados climáticos.");
+    }
+
     public static WeatherData fetchWeather(String city) throws Exception {
+        String apiKey = getApiKey();
         String encodedCity = URLEncoder.encode(city, StandardCharsets.UTF_8.toString());
-        String urlString = BASE_URL + encodedCity + "?key=" + API_KEY + "&unitGroup=metric&lang=pt&contentType=json";
+        String urlString = BASE_URL + encodedCity + "?key=" + apiKey + "&unitGroup=metric&lang=pt&contentType=json";
 
         URL url = java.net.URI.create(urlString).toURL();
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
