@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 public class Main {
     private static final DateTimeFormatter FORMATO_DATA = DateTimeFormatter.ofPattern("ddMMyyyy");
+
     public static void main(String[] args) {
         Imobiliaria imobiliaria = new Imobiliaria();
         Scanner scanner = new Scanner(System.in);
@@ -184,7 +185,8 @@ public class Main {
             return;
         }
 
-        Contrato contrato = new Contrato(inquilinos.get(indiceInquilino), imoveis.get(indiceImovel), dataInicio, dataFinal);
+        Contrato contrato = new Contrato(inquilinos.get(indiceInquilino), imoveis.get(indiceImovel), dataInicio,
+                dataFinal);
         boolean adicionado = imobiliaria.adicionarContrato(contrato);
         if (adicionado) {
             System.out.println("Contrato cadastrado com sucesso.");
@@ -307,7 +309,8 @@ class Apartamento extends Imovel {
 
     @Override
     public String exibirInformacoes() {
-        return String.format("Apartamento - Endereco: %s, Valor aluguel: R$ %.2f, Andar: %d", getEndereco(), getValorAluguel(), andar);
+        return String.format("Apartamento - Endereco: %s, Valor aluguel: R$ %.2f, Andar: %d", getEndereco(),
+                getValorAluguel(), andar);
     }
 }
 
@@ -321,7 +324,8 @@ class Casa extends Imovel {
 
     @Override
     public String exibirInformacoes() {
-        return String.format("Casa - Endereco: %s, Valor aluguel: R$ %.2f, Quintal: %s", getEndereco(), getValorAluguel(), quintal ? "Sim" : "Nao");
+        return String.format("Casa - Endereco: %s, Valor aluguel: R$ %.2f, Quintal: %s", getEndereco(),
+                getValorAluguel(), quintal ? "Sim" : "Nao");
     }
 }
 
@@ -384,14 +388,13 @@ class Contrato {
     @Override
     public String toString() {
         return String.format(
-            "Contrato: %s | Imovel: %s | Inicio: %s | Fim: %s | Situacao: %s | Valor total: R$ %.2f",
-            inquilino.getNome(),
-            imovel.exibirInformacoes(),
-            dataInicio,
-            dataFinal,
-            getSituacaoTexto(),
-            calcularValorTotal()
-        );
+                "Contrato: %s | Imovel: %s | Inicio: %s | Fim: %s | Situacao: %s | Valor total: R$ %.2f",
+                inquilino.getNome(),
+                imovel.exibirInformacoes(),
+                dataInicio,
+                dataFinal,
+                getSituacaoTexto(),
+                calcularValorTotal());
     }
 }
 
