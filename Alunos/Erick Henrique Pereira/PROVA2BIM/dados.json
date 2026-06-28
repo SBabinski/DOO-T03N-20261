@@ -1,0 +1,50 @@
+{
+  "nome" : "erick",
+  "favoritos" : [ {
+    "id" : 75093,
+    "nome" : "Dragon Ball DAIMA",
+    "status" : "To Be Determined",
+    "estreia" : "2024-10-11",
+    "fim" : null,
+    "nota" : 5.0,
+    "emissora" : "Fuji TV",
+    "generos" : "Action, Anime",
+    "sumario" : "Goku and company were living peaceful lives when they suddenly turned small due to a conspiracy! When they discover that the reason for this may lie in a world known as the \"Demon Realm,\" a mysterious young Majin named Glorio appears before them.",
+    "idioma" : "Japanese"
+  } ],
+  "assistidos" : [ {
+    "id" : 75093,
+    "nome" : "Dragon Ball DAIMA",
+    "status" : "To Be Determined",
+    "estreia" : "2024-10-11",
+    "fim" : null,
+    "nota" : 5.0,
+    "emissora" : "Fuji TV",
+    "generos" : "Action, Anime",
+    "sumario" : "Goku and company were living peaceful lives when they suddenly turned small due to a conspiracy! When they discover that the reason for this may lie in a world known as the \"Demon Realm,\" a mysterious young Majin named Glorio appears before them.",
+    "idioma" : "Japanese"
+  } ],
+  "assistir" : [ {
+    "id" : 2103,
+    "nome" : "Dragon Ball Z",
+    "status" : "Ended",
+    "estreia" : "1989-04-26",
+    "fim" : "1996-01-31",
+    "nota" : 8.0,
+    "emissora" : "Fuji TV",
+    "generos" : "Action, Adventure, Anime, Fantasy",
+    "sumario" : "Part 2 of the Dragonball madness, this story starts when Goku is an adult and introduces him to his Saiyan origin. The main theme of Dragonball Z is fighting although it still retains aspects of the humor and adventure from the previous Dragonball series. Characters develop as they grow, mature, and some even have children! Many of Goku's former enemies become his friend they band together to fight greater evils along the way.",
+    "idioma" : "Japanese"
+  }, {
+    "id" : 2368,
+    "nome" : "Dragon Ball Super",
+    "status" : "Ended",
+    "estreia" : "2015-07-05",
+    "fim" : "2018-12-14",
+    "nota" : 7.8,
+    "emissora" : "Fuji TV",
+    "generos" : "Action, Adventure, Anime, Fantasy",
+    "sumario" : "Dragon Ball Super, a brand new television anime inspired by Akira Toriyama's Dragon Ball manga, will premiere on Fuji TV and other channels in July on Sundays at 9:00 a.m. This will be the first new Dragon Ball television series since Dragon Ball GT, which aired from 1996 to 1997.The story of the anime is set a few years after the defeat of Majin Buu, when the Earth has become peaceful once again. The voice of Goku, Gohan, and Goten, Masako Nozawa commented on the new anime, saying, \"We've always used the word 'chō' (Super) with Dragon Ball in commercials, games and the like, but the fact that the series titled Dragon Ball Super is beginning is the best thing ever.\"",
+    "idioma" : "Japanese"
+  } ]
+}

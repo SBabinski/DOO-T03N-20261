@@ -1,72 +1,41 @@
-/**
- * Classe responsavel por fazer os calculos matematicos.
- * Separada da interface grafica para organizar melhor o codigo.
- */
 public class Calculator {
+    Double valorArmazenado = null;
+     String operador = null;
 
-    /**
-     * Realiza a operacao matematica entre dois numeros.
-     * Lanca CalculatorException se houver divisao por zero.
-     */
-    public double calculate(double a, double b, String operador)
-            throws CalculatorException {
-
-        switch (operador) {
-            case "+":
-                return a + b;
-            case "-":
-                return a - b;
-            case "x":
-                return a * b;
-            case "/":
-                // Verifica divisao por zero ANTES de dividir
-                if (b == 0) {
-                    throw new CalculatorException(
-                        CalculatorException.ErrorType.DIVISION_BY_ZERO,
-                        "Divisor igual a zero"
-                    );
-                }
-                return a / b;
-            default:
-                throw new CalculatorException(
-                    CalculatorException.ErrorType.NO_OPERATOR_SELECTED,
-                    "Nenhum operador valido"
-                );
-        }
+    public void limpar() {
+        valorArmazenado = null;
+        operador = null;
     }
 
-    /**
-     * Converte texto em numero double.
-     * Lanca CalculatorException se o texto nao for um numero valido.
-     */
-    public double parseNumber(String texto) throws CalculatorException {
-        // Verifica se o campo esta vazio
-        if (texto == null || texto.trim().isEmpty()) {
-            throw new CalculatorException(
-                CalculatorException.ErrorType.INVALID_INPUT,
-                "Campo vazio"
-            );
-        }
-
+    public void definirValorArmazenadoDeString(String texto) throws CalculatorException {
         try {
-            return Double.parseDouble(texto);
-        } catch (NumberFormatException e) {
-            // NumberFormatException ocorre quando o texto nao e um numero
-            throw new CalculatorException(
-                CalculatorException.ErrorType.INVALID_INPUT,
-                "Texto invalido: " + texto
-            );
+            valorArmazenado = Double.parseDouble(texto);
+        } catch (NumberFormatException e) { // se a string não for um número válido, lança uma exceção personalizada
+            throw new CalculatorException("Entrada inválida: use apenas números e ponto decimal.");
         }
     }
 
-    /**
-     * Formata o resultado: se for numero inteiro, remove o ".0"
-     * Exemplo: 10.0 vira "10", mas 3.14 continua "3.14"
-     */
-    public String formatarResultado(double valor) {
-        if (valor == (long) valor) {
-            return String.valueOf((long) valor);
+    public double calcular(double esquerdo, double direito, String operacao) throws CalculatorException {
+        switch (operacao) {
+            case "+":
+                return esquerdo + direito;
+            case "-":
+                return esquerdo - direito;
+            case "×":
+            case "*":
+                return esquerdo * direito;
+            case "÷":
+            case "/":
+                if (direito == 0) throw new CalculatorException("Divisão por zero não permitida.");
+                return esquerdo / direito; 
+            default:
+                throw new CalculatorException("Operação desconhecida: " + operacao); 
         }
-        return String.valueOf(valor);
+    }
+
+    public static String formatarDouble(double v) { // formata para não mostrar .0 em inteiros
+        if (Double.isNaN(v) || Double.isInfinite(v)) return String.valueOf(v); // NaN e infinito ficam como estão
+        if (v == (long) v) return String.format("%d", (long) v); // se for inteiro, mostra sem decimal
+        return String.valueOf(v); // caso contrário, mostra o double normalmente
     }
 }
