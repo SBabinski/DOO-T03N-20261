@@ -1,0 +1,119 @@
+{
+  "nome": "gui",
+  "favoritos": [
+    {
+      "id": 17861,
+      "name": "Dark",
+      "language": "German",
+      "genres": [
+        "Drama",
+        "Science-Fiction",
+        "Supernatural"
+      ],
+      "status": "Ended",
+      "premiered": "2017-12-01",
+      "ended": "2020-06-27",
+      "rating": {
+        "average": 8.2
+      },
+      "webChannel": {
+        "name": "Netflix"
+      }
+    },
+    {
+      "id": 61315,
+      "name": "Dark Matter",
+      "language": "English",
+      "genres": [
+        "Science-Fiction",
+        "Thriller",
+        "Mystery"
+      ],
+      "status": "Running",
+      "premiered": "2024-05-08",
+      "rating": {
+        "average": 7.4
+      },
+      "webChannel": {
+        "name": "Apple TV"
+      }
+    },
+    {
+      "id": 52165,
+      "name": "A Generala",
+      "language": "Portuguese",
+      "genres": [
+        "Drama",
+        "Action",
+        "History"
+      ],
+      "status": "Ended",
+      "premiered": "2020-11-24",
+      "ended": "2020-12-25",
+      "rating": {},
+      "webChannel": {
+        "name": "OPTO | SIC"
+      }
+    }
+  ],
+  "assistidas": [
+    {
+      "id": 17861,
+      "name": "Dark",
+      "language": "German",
+      "genres": [
+        "Drama",
+        "Science-Fiction",
+        "Supernatural"
+      ],
+      "status": "Ended",
+      "premiered": "2017-12-01",
+      "ended": "2020-06-27",
+      "rating": {
+        "average": 8.2
+      },
+      "webChannel": {
+        "name": "Netflix"
+      }
+    },
+    {
+      "id": 61315,
+      "name": "Dark Matter",
+      "language": "English",
+      "genres": [
+        "Science-Fiction",
+        "Thriller",
+        "Mystery"
+      ],
+      "status": "Running",
+      "premiered": "2024-05-08",
+      "rating": {
+        "average": 7.4
+      },
+      "webChannel": {
+        "name": "Apple TV"
+      }
+    }
+  ],
+  "desejoAssistir": [
+    {
+      "id": 17861,
+      "name": "Dark",
+      "language": "German",
+      "genres": [
+        "Drama",
+        "Science-Fiction",
+        "Supernatural"
+      ],
+      "status": "Ended",
+      "premiered": "2017-12-01",
+      "ended": "2020-06-27",
+      "rating": {
+        "average": 8.2
+      },
+      "webChannel": {
+        "name": "Netflix"
+      }
+    }
+  ]
+}
