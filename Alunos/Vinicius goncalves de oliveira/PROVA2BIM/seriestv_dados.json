@@ -1,0 +1,246 @@
+{
+  "nome": "oliver",
+  "favoritos": [
+    {
+      "id": 169,
+      "name": "Breaking Bad",
+      "language": "English",
+      "genres": [
+        "Drama",
+        "Crime",
+        "Thriller"
+      ],
+      "status": "Ended",
+      "premiered": "2008-01-20",
+      "ended": "2019-10-11",
+      "rating": {
+        "average": 9.2
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/501/1253519.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/501/1253519.jpg"
+      },
+      "summary": "\u003cp\u003e\u003cb\u003eBreaking Bad\u003c/b\u003e follows protagonist Walter White, a chemistry teacher who lives in New Mexico with his wife and teenage son who has cerebral palsy. White is diagnosed with Stage III cancer and given a prognosis of two years left to live. With a new sense of fearlessness based on his medical prognosis, and a desire to secure his family\u0027s financial security, White chooses to enter a dangerous world of drugs and crime and ascends to power in this world. The series explores how a fatal diagnosis such as White\u0027s releases a typical man from the daily concerns and constraints of normal society and follows his transformation from mild family man to a kingpin of the drug trade.\u003c/p\u003e",
+      "network": {
+        "name": "AMC"
+      }
+    },
+    {
+      "id": 27845,
+      "name": "Breaking Bad: Original Minisodes",
+      "language": "English",
+      "genres": [
+        "Comedy",
+        "Crime"
+      ],
+      "status": "Ended",
+      "premiered": "2009-02-17",
+      "ended": "2011-07-11",
+      "rating": {
+        "average": 7.0
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/216/540867.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/216/540867.jpg"
+      },
+      "summary": "\u003cp\u003eWatch Hank and Marie as they celebrate Valentine\u0027s Day in the bedroom in \"Good Cop, Bad Cop\". View a flashback to Hank and Marie\u0027s wedding as the groom discusses with Walt his last wild night as a bachelor in \"Wedding Day\". Go inside Jesse\u0027s band TwaughtHammer as he and Badger make a behind-the-music documentary, and sing along to the full music video for their song \"Fallacies\". Finally, watch Marie discuss politics and patriotism in her personal video diary, \"Marie\u0027s Confession\".\u003c/p\u003e",
+      "network": {
+        "name": "AMC"
+      }
+    }
+  ],
+  "jaAssistidas": [
+    {
+      "id": 975,
+      "name": "Batman",
+      "language": "English",
+      "genres": [
+        "Comedy",
+        "Action",
+        "Adventure"
+      ],
+      "status": "Ended",
+      "premiered": "1966-01-12",
+      "ended": "1968-03-14",
+      "rating": {
+        "average": 7.8
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/6/16463.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/6/16463.jpg"
+      },
+      "summary": "\u003cp\u003eWealthy entrepreneur Bruce Wayne and his ward Dick Grayson lead a double life: they are actually crime fighting duo Batman and Robin. A secret Batpole in the Wayne mansion leads to the Batcave, where Police Commissioner Gordon often calls with the latest emergency threatening Gotham City. Racing to the scene of the crime in the Batmobile, Batman and Robin must (with the help of their trusty Bat-utility-belt) thwart the efforts of a variety of master criminals, including Catwoman, Egghead, The Joker, King Tut, The Penguin, and The Riddler.\u003c/p\u003e",
+      "network": {
+        "name": "ABC"
+      }
+    },
+    {
+      "id": 504,
+      "name": "Batman Beyond",
+      "language": "English",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science-Fiction"
+      ],
+      "status": "Ended",
+      "premiered": "1999-01-10",
+      "ended": "2001-12-18",
+      "rating": {
+        "average": 8.0
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/4/10842.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/4/10842.jpg"
+      },
+      "summary": "\u003cp\u003e\u003cb\u003eBatman Beyond\u003c/b\u003e tells the story of Terry McGinnis was just an ordinary teenager...until his father was mysteriously murdered. Suspecting foul play at his father\u0027s company Wayne/Powers Corporation, Terry meets Bruce Wayne and learns a secret identity hidden for decades. Now too old to battle injustice, Wayne is a bitter shell of his former self and refuses to help. So Terry does what any brash young kid would do: steal the Batsuit and take matters into his own hands! Vowing to avenge his father\u0027s death, Terry dons the high-tech suit - tricked out with jetpacks for flying, a supersensitive microphone for eavesdropping and even camouflage capabilities - in search of his father\u0027s assassin.\u003c/p\u003e",
+      "network": {
+        "name": "The WB"
+      }
+    },
+    {
+      "id": 169,
+      "name": "Breaking Bad",
+      "language": "English",
+      "genres": [
+        "Drama",
+        "Crime",
+        "Thriller"
+      ],
+      "status": "Ended",
+      "premiered": "2008-01-20",
+      "ended": "2019-10-11",
+      "rating": {
+        "average": 9.2
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/501/1253519.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/501/1253519.jpg"
+      },
+      "summary": "\u003cp\u003e\u003cb\u003eBreaking Bad\u003c/b\u003e follows protagonist Walter White, a chemistry teacher who lives in New Mexico with his wife and teenage son who has cerebral palsy. White is diagnosed with Stage III cancer and given a prognosis of two years left to live. With a new sense of fearlessness based on his medical prognosis, and a desire to secure his family\u0027s financial security, White chooses to enter a dangerous world of drugs and crime and ascends to power in this world. The series explores how a fatal diagnosis such as White\u0027s releases a typical man from the daily concerns and constraints of normal society and follows his transformation from mild family man to a kingpin of the drug trade.\u003c/p\u003e",
+      "network": {
+        "name": "AMC"
+      }
+    },
+    {
+      "id": 27845,
+      "name": "Breaking Bad: Original Minisodes",
+      "language": "English",
+      "genres": [
+        "Comedy",
+        "Crime"
+      ],
+      "status": "Ended",
+      "premiered": "2009-02-17",
+      "ended": "2011-07-11",
+      "rating": {
+        "average": 7.0
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/216/540867.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/216/540867.jpg"
+      },
+      "summary": "\u003cp\u003eWatch Hank and Marie as they celebrate Valentine\u0027s Day in the bedroom in \"Good Cop, Bad Cop\". View a flashback to Hank and Marie\u0027s wedding as the groom discusses with Walt his last wild night as a bachelor in \"Wedding Day\". Go inside Jesse\u0027s band TwaughtHammer as he and Badger make a behind-the-music documentary, and sing along to the full music video for their song \"Fallacies\". Finally, watch Marie discuss politics and patriotism in her personal video diary, \"Marie\u0027s Confession\".\u003c/p\u003e",
+      "network": {
+        "name": "AMC"
+      }
+    }
+  ],
+  "queroAssistir": [
+    {
+      "id": 975,
+      "name": "Batman",
+      "language": "English",
+      "genres": [
+        "Comedy",
+        "Action",
+        "Adventure"
+      ],
+      "status": "Ended",
+      "premiered": "1966-01-12",
+      "ended": "1968-03-14",
+      "rating": {
+        "average": 7.8
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/6/16463.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/6/16463.jpg"
+      },
+      "summary": "\u003cp\u003eWealthy entrepreneur Bruce Wayne and his ward Dick Grayson lead a double life: they are actually crime fighting duo Batman and Robin. A secret Batpole in the Wayne mansion leads to the Batcave, where Police Commissioner Gordon often calls with the latest emergency threatening Gotham City. Racing to the scene of the crime in the Batmobile, Batman and Robin must (with the help of their trusty Bat-utility-belt) thwart the efforts of a variety of master criminals, including Catwoman, Egghead, The Joker, King Tut, The Penguin, and The Riddler.\u003c/p\u003e",
+      "network": {
+        "name": "ABC"
+      }
+    },
+    {
+      "id": 504,
+      "name": "Batman Beyond",
+      "language": "English",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science-Fiction"
+      ],
+      "status": "Ended",
+      "premiered": "1999-01-10",
+      "ended": "2001-12-18",
+      "rating": {
+        "average": 8.0
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/4/10842.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/4/10842.jpg"
+      },
+      "summary": "\u003cp\u003e\u003cb\u003eBatman Beyond\u003c/b\u003e tells the story of Terry McGinnis was just an ordinary teenager...until his father was mysteriously murdered. Suspecting foul play at his father\u0027s company Wayne/Powers Corporation, Terry meets Bruce Wayne and learns a secret identity hidden for decades. Now too old to battle injustice, Wayne is a bitter shell of his former self and refuses to help. So Terry does what any brash young kid would do: steal the Batsuit and take matters into his own hands! Vowing to avenge his father\u0027s death, Terry dons the high-tech suit - tricked out with jetpacks for flying, a supersensitive microphone for eavesdropping and even camouflage capabilities - in search of his father\u0027s assassin.\u003c/p\u003e",
+      "network": {
+        "name": "The WB"
+      }
+    },
+    {
+      "id": 169,
+      "name": "Breaking Bad",
+      "language": "English",
+      "genres": [
+        "Drama",
+        "Crime",
+        "Thriller"
+      ],
+      "status": "Ended",
+      "premiered": "2008-01-20",
+      "ended": "2019-10-11",
+      "rating": {
+        "average": 9.2
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/501/1253519.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/501/1253519.jpg"
+      },
+      "summary": "\u003cp\u003e\u003cb\u003eBreaking Bad\u003c/b\u003e follows protagonist Walter White, a chemistry teacher who lives in New Mexico with his wife and teenage son who has cerebral palsy. White is diagnosed with Stage III cancer and given a prognosis of two years left to live. With a new sense of fearlessness based on his medical prognosis, and a desire to secure his family\u0027s financial security, White chooses to enter a dangerous world of drugs and crime and ascends to power in this world. The series explores how a fatal diagnosis such as White\u0027s releases a typical man from the daily concerns and constraints of normal society and follows his transformation from mild family man to a kingpin of the drug trade.\u003c/p\u003e",
+      "network": {
+        "name": "AMC"
+      }
+    },
+    {
+      "id": 27845,
+      "name": "Breaking Bad: Original Minisodes",
+      "language": "English",
+      "genres": [
+        "Comedy",
+        "Crime"
+      ],
+      "status": "Ended",
+      "premiered": "2009-02-17",
+      "ended": "2011-07-11",
+      "rating": {
+        "average": 7.0
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/216/540867.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/216/540867.jpg"
+      },
+      "summary": "\u003cp\u003eWatch Hank and Marie as they celebrate Valentine\u0027s Day in the bedroom in \"Good Cop, Bad Cop\". View a flashback to Hank and Marie\u0027s wedding as the groom discusses with Walt his last wild night as a bachelor in \"Wedding Day\". Go inside Jesse\u0027s band TwaughtHammer as he and Badger make a behind-the-music documentary, and sing along to the full music video for their song \"Fallacies\". Finally, watch Marie discuss politics and patriotism in her personal video diary, \"Marie\u0027s Confession\".\u003c/p\u003e",
+      "network": {
+        "name": "AMC"
+      }
+    }
+  ]
+}
